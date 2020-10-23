@@ -1,8 +1,24 @@
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: local("SFProDisplay-Regular"),
+    url("../fonts/SFProDisplay-Regular.woff") format("woff"),
+    url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: local("SFProDisplay-Semibold"),
+    url("../fonts/SFProDisplay-Semibold.woff") format("woff"),
+    url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
+  font-family: SFProDisplay-Regular, sans-serif;
   background: #e5e5e5;
 }
 .header {
@@ -81,6 +97,9 @@ body {
 .search-input::placeholder {
   color: #bfbfbf;
 }
+.menu-toggle {
+  display: none;
+}
 .content {
   max-width: 1200px;
   width: 90%;
@@ -102,6 +121,7 @@ body {
   padding-bottom: 0;
 }
 .post-title {
+  font-family: SFProDisplay-Semibold, sans-serif;
   margin-top: 0;
   margin-bottom: 19px;
   font-weight: 600;
@@ -197,6 +217,7 @@ body {
   margin-right: 17px;
 }
 .user-name {
+  font-family: SFProDisplay-Semibold, sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -269,7 +290,7 @@ body {
 }
 .card-title {
   margin: 0;
-  font-weight: 600;
+  font-family: SFProDisplay-Semibold, sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #595959;
@@ -281,7 +302,7 @@ body {
   margin: 0 0 10px;
   text-decoration: none;
   color: #d48806;
-  font-weight: 600;
+  font-family: SFProDisplay-Semibold, sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -312,4 +333,28 @@ body {
   line-height: 20px;
   text-align: center;
   color: #fff;
+}
+@media (max-width: 990px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin-left: 20px;
+  }
+  .menu-toggle span {
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .sidebar {
+    display: none;
+  }
+  .sidebar.visible {
+    display: block;
+  }
+  .posts {
+    width: 100%;
+  }
 }
