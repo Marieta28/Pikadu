@@ -37,10 +37,30 @@
   </header>
   <div class="content">
     <main class="posts">
-<form action="#" class="addd-post">
-  <input type="text" name="post-title" class="add-title" placeholder="">
-  <textarea name="post-text" id="text" class="add-text"></textarea>
-  <button type="submit" class="button add-button"></button>
+<form action="#" class="add-post">
+  <input type="text" name="post-title" class="add-title" placeholder="Заголовок поста">
+  <textarea name="post-text" id="text" class="add-text" placeholder="Текст вашего поста"></textarea>
+    <div class="add-buttons">
+      <a href="#" id="button-new-post" class="button">
+        <svg class="icon icon-fire">
+          <use xlink:href="images/icons.svg#fire"></use>
+        </svg>
+        Опубликовать пост
+      </a>
+      <button type="submit" class="button button-outline">
+        <svg class="icon icon-photo">
+          <use xlink:href="images/icons.svg#video"></use>
+        </svg>
+        Видео
+      </button>
+      <button type="submit" class="button button-outline">
+        <svg class="icon icon-video">
+          <use xlink:href="images/icons.svg#photo"></use>
+        </svg>
+        Фото
+      </button>
+    </div>
+
 </form>
     </main>
     <aside class="sidebar ">

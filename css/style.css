@@ -257,7 +257,12 @@ body {
   border-right: 3px solid #faad14;
   color: #faad14;
 }
+.button-group {
+  display: flex;
+}
 .button {
+  display: inline;
+  margin: 0;
   background: #faad14;
   border-radius: 4px;
   text-decoration: none;
@@ -265,13 +270,29 @@ body {
   font-size: 16px;
   line-height: 24px;
   padding: 13px;
+  border: none;
 }
-.button-new-post {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 20px;
+.add-post .button {
+  margin-right: 20px;
+}
+#button-new-post {
+  min-width: 370px;
+  padding: 15px 25px 16px 36px;
+}
+
+.button-outline {
+  background: #ffffff;
+  border: 1px solid #faad14;
+  color: #faad14;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-outline .icon {
+  width: 14px;
+  height: 11px;
+  fill: #ffc53d;
 }
 .icon-fire {
   fill: #fff;
@@ -334,6 +355,28 @@ body {
   line-height: 20px;
   text-align: center;
   color: #fff;
+}
+.add-post {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-title,
+.add-text {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  padding: 23px 30px;
+  margin-bottom: 16px;
+}
+.add-text {
+  min-height: 362px;
+}
+.add-button {
+  width: 100%;
+  max-width: 370px;
+  margin-right: 36px;
+}
+.add-post .button-outline {
 }
 @media (max-width: 990px) {
   .menu-toggle {
